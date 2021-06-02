@@ -1,9 +1,9 @@
 {
   "cmd": ["csc", "-nologo", "$file", "&&", "start", "cmd", "/k", "${file_path}/${file_base_name}.exe && echo. && pause & exit"],
   "shell" : true,
-  "path" : "C:\\Program Files\\Mono\\bin",
+  "path" : "C:\\Program Files\\Mono\\bin", // or "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319[version]" if use .netframework
   "file_patterns" : ["*cs", "*.csx"],
   "selector" : ["source.cs"]
 }
 
-// Once compiled, it will automatically open a cmd window to open the compiled file
+// NB : You can remove the "path" part when it is registered in the "System Environment Variables"
